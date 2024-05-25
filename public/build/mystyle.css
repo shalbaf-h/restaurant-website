@@ -1,0 +1,88 @@
+.parent-rotatex:hover {
+  transform: rotateX(180deg);
+}
+
+#back-rotatex {
+  transform: translateZ(-0.1px) rotateX(180deg);
+
+}
+
+.counter-bg {
+  position: relative;
+}
+
+.counter-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(../img/HeyWordpress-Food-image-3.jpg);
+  background-position: center;
+  background-size: cover;
+  filter: brightness(0.3);
+}
+
+.chef {
+  transform: translateX(-150px);
+  transition: all 2s;
+  opacity: 0;
+  filter: blur(5);
+}
+
+.chef2 {
+  transform: translateY(100px);
+  transition: all 2s;
+  opacity: 0;
+  filter: blur(5);
+}
+
+.chef3 {
+  transform: translateX(150px);
+  transition: all 2s;
+  opacity: 0;
+  filter: blur(5);
+}
+
+.show {
+  transform: translateX(0);
+  opacity: 1;
+  filter: blur(0);
+}
+
+.footer-bg {
+  position: relative;
+}
+
+.footer-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(../img/10.jpg);
+  background-position: center;
+  background-size: cover;
+  filter: brightness(0.3);
+  z-index: -20;
+}
+
+@media only screen and (max-width:768px) {
+  .navi-container.active {
+    right: 0;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
